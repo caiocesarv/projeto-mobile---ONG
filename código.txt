@@ -1,0 +1,121 @@
+import React, { useState } from 'react';
+import { View, Text, TextInput, StyleSheet, Button, ScrollView, FlatList, TouchableOpacity } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
+
+const App = () => {
+
+  const [donationAmount, setDonationAmount] = useState('');
+
+  const donateHandler = () => {
+    // Simula a submissão da doação
+    alert(`Obrigado por doar ${donationAmount} reais!`);
+    setDonationAmount('');
+  }
+
+  const [events, setEvents] = useState([
+    { id: '1', title: 'Arraial USMF', date: '2023-06-24', location: 'Local 1' },
+    { id: '2', title: 'Criança feliz USMF', date: '2023-09-12', location: 'Local 2' },
+    { id: '3', title: 'Natal solidário USMF', date: '2023-12-24', location: 'Local 3' },
+  ]);
+
+  const renderEventItem = (itemData) => (
+    <TouchableOpacity onPress={() => console.log('Evento selecionado')}>
+      <View style={styles.eventItem}>
+        <Text style={styles.eventTitle}>{itemData.item.title}</Text>
+        <Text style={styles.eventDate}>{itemData.item.date}</Text>
+        <Text style={styles.eventLocation}>{itemData.item.location}</Text>
+        <Ionicons name="chevron-forward-outline" size={20} color="#aaa" />
+      </View>
+    </TouchableOpacity>
+  );
+
+  return (
+    <View style={styles.container}>
+      <View style={styles.header}>
+        <Text style={styles.headerTitle}>ONG USMF</Text>
+      </View>
+      <ScrollView>
+        <View style={styles.donation}>
+          <Text style={styles.donationTitle}>Faça sua doação:</Text>
+          <TextInput
+            style={styles.donationInput}
+            keyboardType='numeric'
+            placeholder='Digite o valor'
+            value={donationAmount}
+            onChangeText={setDonationAmount}
+          />
+          <Button title="Doar" onPress={donateHandler} />
+        </View>
+        <View style={styles.events}>
+          <Text style={styles.eventsTitle}>Eventos:</Text>
+          <FlatList
+            data={events}
+            renderItem={renderEventItem}
+            keyExtractor={(item) => item.id}
+          />
+        </View>
+      </ScrollView>
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    padding: 20,
+  },
+  header: {
+    backgroundColor: '#123456',
+    padding: 10,
+    marginBottom: 20,
+    marginTop: 20,
+  },
+  headerTitle: {
+    color: '#fff',
+    fontSize: 24,
+    fontWeight: 'bold',
+    textAlign: 'center',
+  },
+  donation: {
+    marginBottom: 20,
+  },
+  donationTitle: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginBottom: 10,
+  },
+  donationInput: {
+    borderWidth: 1,
+    borderColor: '#ccc',
+    padding: 10,
+    marginBottom: 10,
+  },
+  events: {
+    marginBottom: 20,
+  },
+  eventsTitle: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginBottom: 10,
+  },
+  eventItem: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    borderWidth: 1,
+    borderColor: '#ccc',
+  },
+  eventTitle: {  // chave aberta faltando aqui
+    fontSize: 16,
+    fontWeight: 'bold',
+  },
+  eventDate: {
+    color: '#aaa',
+    marginBottom: 5,
+  },
+  eventLocation: {
+    color: '#555',
+  },
+});
+export default App;
