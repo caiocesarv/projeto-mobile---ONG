@@ -1,0 +1,20 @@
+Q1: Existe algum estabelecimento/associação/pessoa/instituição que precisaria de um aplicativo móvel? Caso sim, o descreva.
+
+Para responder a essa pergunta, comece por observar as atividades e desafios enfrentados por diferentes tipos de estabelecimentos, associações, pessoas ou instituições. Algumas ideias incluem:
+
+Empresas locais que precisam melhorar sua presença online ou oferecer um serviço melhor aos clientes, como uma loja de produtos orgânicos que gostaria de fornecer informações nutricionais em tempo real sobre seus produtos.
+
+Organizações sem fins lucrativos que precisam de uma maneira eficaz de arrecadar fundos ou divulgar sua missão e atividades, como uma instituição de caridade que queria criar uma plataforma de doação online mais fácil de usar.
+
+Grupos comunitários que buscam maneiras de se conectar e se engajar, como um grupo de ativistas ambientais que gostaria de organizar eventos e campanhas mais facilmente através de um aplicativo.
+
+Q2: Quais são as principais consequências e impactos causados na vida das pessoas envolvidas com o problema? Como o aplicativo móvel solucionaria ou ajudaria a resolver os impactos causados pelo problema?
+
+Depois de identificar um problema, é importante considerar como ele afeta as pessoas envolvidas e quais seriam os impactos positivos de uma solução eficaz. Algumas ideias incluem:
+
+Para a loja de produtos orgânicos mencionada acima, um aplicativo com informações nutricionais em tempo real poderia ajudar os clientes a fazer escolhas mais saudáveis e sustentáveis e, portanto, melhorar sua saúde a longo prazo.
+
+Para a instituição de caridade, uma plataforma de doação mais fácil de usar poderia ajudá-los a arrecadar mais fundos e, portanto, expandir seus programas e serviços para apoiar mais pessoas necessitadas.
+Q3: Como seria o protótipo da solução? Que tipo de informação o aplicativo móvel deveria conter? Como essas informações poderiam ser organizadas no aplicativo móvel
+
+Para a instituição de caridade, um aplicativo móvel poderia permitir que as pessoas doassem facilmente com apenas alguns cliques, além de oferecer informações sobre as atividades da organização e as maneiras como os doadores estão fazendo a diferença.
