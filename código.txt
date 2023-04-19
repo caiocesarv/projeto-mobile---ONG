@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { View, Text, TextInput, StyleSheet, Button, ScrollView, FlatList, TouchableOpacity } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 
+//Usamos o hook useState para gerenciar o estado da variável donationAmount. Também definimos a função setDonationAmount para atualizar o valor dessa variável.
+
 const App = () => {
 
   const [donationAmount, setDonationAmount] = useState('');
@@ -12,11 +14,15 @@ const App = () => {
     setDonationAmount('');
   }
 
+//Essa função é chamada quando o usuário clica no botão "Doar". Ela exibe um alerta com o valor da doação e, em seguida, redefine a variável donationAmount
+
   const [events, setEvents] = useState([
     { id: '1', title: 'Arraial USMF', date: '2023-06-24', location: 'Local 1' },
     { id: '2', title: 'Criança feliz USMF', date: '2023-09-12', location: 'Local 2' },
     { id: '3', title: 'Natal solidário USMF', date: '2023-12-24', location: 'Local 3' },
   ]);
+
+//Usando o hook useState, definimos o estado inicial da variável events, que é uma lista de objetos que representam os eventos da ONG. Cada objeto tem um ID, um título, uma data e um local.
 
   const renderEventItem = (itemData) => (
     <TouchableOpacity onPress={() => console.log('Evento selecionado')}>
@@ -28,6 +34,8 @@ const App = () => {
       </View>
     </TouchableOpacity>
   );
+  
+//Aqui, definimos a função renderEventItem, que é chamada para renderizar cada item da lista de eventos. Essa função retorna um componente TouchableOpacity que, quando pressionado, exibe uma mensagem no console. Dentro do TouchableOpacity, temos um componente View que contém o título, a data e o local do evento, bem como um ícone Ionicons que indica que o usuário pode clicar no item para obter mais informações.
 
   return (
     <View style={styles.container}>
